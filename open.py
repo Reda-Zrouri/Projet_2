@@ -10,8 +10,11 @@ if reponse.ok:
 	soup = BeautifulSoup(reponse.text, 'lxml')
 	tds = soup.findAll('tr')
 	title = soup.find('title')
+	category = soup.findAll('li')
+	
 
 	print(title.text)
+	print(category[2].text)
 	print(tds[0].text, tds[1].text, tds[2].text, tds[3].text, tds[4].text, tds[5].text, tds[6].text)
 
 
