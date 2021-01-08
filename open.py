@@ -3,10 +3,12 @@
 import requests 
 from bs4 import BeautifulSoup
 
+# Lien page et image 
 
 url = "http://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html"
 img = "http://books.toscrape.com/media/cache/fe/72/fe72f0532301ec28892ae79a629a293c.jpg"
 
+#Extraction des donnèes et frabrication du fichier csv
 
 with open('projet2.csv', 'w') as outf:
 	reponse = requests.get(url)
