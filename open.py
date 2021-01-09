@@ -17,11 +17,14 @@ with open('projet2.csv', 'w') as outf:
 		tds = soup.findAll('tr')
 		title = soup.find('title')
 		category = soup.findAll('li')
+		dsp = soup.findAll('p')
+				
 
-		
+			
 		print(url)
 		print(title.text)
 		print(category[2].text)
-		print(tds[0].text, tds[1].text, tds[2].text, tds[3].text, tds[4].text, tds[5].text, tds[6].text)
+		print(dsp[3].text)
+		print(tds[0].text, tds[1].text, tds[2].text, tds[3].text, tds[4].text, tds[5].text)
 		print(img)
-		outf.write(url + ',' + title.text + ',' + category[2].text + ',' + tds[0].text + ',' + tds[1].text + ',' + tds[3].text + ',' + tds[4].text + ',' + tds[5].text + ',' + tds[6].text + ',' + img)
+		outf.write(url + ',' + title.text + ',' + category[2].text + ',' + dsp[3].text + ',' + tds[0].text + ',' + tds[1].text + ',' + tds[3].text + ',' + tds[4].text + ',' + tds[5].text  + ',' + img)
